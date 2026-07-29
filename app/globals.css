@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --kc-blue: #003da5;
+  --kc-blue-deep: #002a73;
+  --kc-blue-soft: #e8eef8;
+  --kc-blue-muted: #4a6fb5;
+  --kc-yellow: #f6c344;
+  --kc-yellow-deep: #e0a820;
+  --kc-white: #ffffff;
+  --kc-surface: #f3f6fb;
+  --kc-ink: #0f1c33;
+  --kc-muted: #5a6a82;
+  --kc-border: #d5deeb;
+}
+
+@theme inline {
+  --color-kc-blue: var(--kc-blue);
+  --color-kc-blue-deep: var(--kc-blue-deep);
+  --color-kc-blue-soft: var(--kc-blue-soft);
+  --color-kc-blue-muted: var(--kc-blue-muted);
+  --color-kc-yellow: var(--kc-yellow);
+  --color-kc-yellow-deep: var(--kc-yellow-deep);
+  --color-kc-white: var(--kc-white);
+  --color-kc-surface: var(--kc-surface);
+  --color-kc-ink: var(--kc-ink);
+  --color-kc-muted: var(--kc-muted);
+  --color-kc-border: var(--kc-border);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-dm-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  background: var(--kc-surface);
+  color: var(--kc-ink);
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--kc-yellow) 70%, white);
+  color: var(--kc-ink);
+}
