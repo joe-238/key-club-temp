@@ -28,15 +28,18 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-50">
       <div className="border-b border-kc-yellow-deep/30 bg-kc-yellow px-4 py-2 text-center text-xs font-semibold tracking-wide text-kc-blue-deep sm:text-sm">
-        {tagline ?? "Caring — Our Way of Life · Student-led service & leadership"}
+        {tagline ??
+          "Caring — Our Way of Life · Student-led service & leadership"}
       </div>
 
       <div className="border-b border-kc-border/70 bg-kc-white/95 shadow-[0_4px_24px_rgba(15,28,51,0.06)] backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link href="/" className="group flex min-w-0 items-center gap-3">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-kc-blue text-xs font-bold leading-tight tracking-tight text-white shadow-[0_8px_20px_rgba(0,61,165,0.28)] transition group-hover:bg-kc-blue-deep sm:h-12 sm:w-12 sm:text-sm">
-              KC
-            </span>
+            <img
+              src="/logo.png"
+              alt="School logo"
+              className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12"
+            />
             <span className="min-w-0">
               <span className="block truncate font-display text-lg font-semibold leading-tight tracking-tight text-kc-blue-deep sm:text-xl lg:text-2xl">
                 {chapterName}
