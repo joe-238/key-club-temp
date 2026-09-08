@@ -34,7 +34,7 @@ export function UpcomingEvents({ events }: { events: ClubEvent[] }) {
       {upcoming.length === 0 ? (
         <p className="mt-6 text-kc-muted">No upcoming events yet. Check back soon.</p>
       ) : (
-        <ul className="mt-6 divide-y divide-kc-border overflow-hidden rounded-[1.5rem] border border-kc-border bg-white">
+        <ul className="mt-6 divide-y divide-kc-border overflow-hidden rounded-2xl border border-kc-border bg-white shadow-[0_8px_30px_rgba(15,28,51,0.06)]">
           {upcoming.map((ev) => (
             <li
               key={ev._id}

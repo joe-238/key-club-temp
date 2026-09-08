@@ -29,7 +29,7 @@ export function PersonCard({
     : null;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-kc-border bg-white shadow-[0_12px_30px_rgba(15,28,51,0.05)]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-kc-border bg-white shadow-[0_12px_30px_rgba(15,28,51,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(15,28,51,0.1)]">
       <div className="relative aspect-[4/3] bg-kc-blue-soft">
         {photoUrl ? (
           <Image

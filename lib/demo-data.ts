@@ -1,12 +1,13 @@
 import type { AboutPage, ClubEvent, Person, SiteSettings } from "@/lib/types";
 
 export const demoSiteSettings: SiteSettings = {
-  chapterName: "Key Club",
+  chapterName: "SITHS Key Club",
   tagline:
     "Caring — Our Way of Life. Serving our school and community together.",
   heroCtaLabel: "View events",
   heroCtaHref: "#calendar",
-  footerText: "Key Club International — student-led service leadership.",
+  footerText:
+    "Staten Island Technical High School Key Club — student-led service and leadership through Key Club International.",
   email: "keyclub@school.edu",
   socialLinks: [
     {

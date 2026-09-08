@@ -10,7 +10,7 @@ export default defineType({
       title: "Chapter Name",
       type: "string",
       validation: (Rule) => Rule.required(),
-      initialValue: "Key Club",
+      initialValue: "SITHS Key Club",
     }),
     defineField({
       name: "tagline",

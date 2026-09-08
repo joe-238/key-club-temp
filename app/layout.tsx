@@ -40,19 +40,11 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${fraunces.variable}`}>
       <body className="antialiased">
-        <div className="relative min-h-screen overflow-x-hidden">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10"
-            style={{
-              background: `
-                radial-gradient(ellipse 80% 50% at 10% -10%, color-mix(in srgb, var(--kc-blue) 18%, transparent), transparent),
-                radial-gradient(ellipse 60% 40% at 90% 0%, color-mix(in srgb, var(--kc-yellow) 22%, transparent), transparent),
-                linear-gradient(180deg, var(--kc-blue-soft) 0%, var(--kc-surface) 38%, var(--kc-surface) 100%)
-              `,
-            }}
+        <div className="relative min-h-screen overflow-x-hidden bg-white">
+          <SiteHeader
+            chapterName={settings.chapterName}
+            tagline={settings.tagline}
           />
-          <SiteHeader chapterName={settings.chapterName} />
           <main className="flex-1">{children}</main>
           <SiteFooter settings={settings} />
         </div>
