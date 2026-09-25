@@ -13,14 +13,14 @@
     "@portabletext/react": "^3.2.4",
     "@portabletext/types": "^4.0.2",
     "@sanity/image-url": "^2.1.1",
-    "@sanity/vision": "^6.4.0",
+    "@sanity/vision": "^5.31.2",
     "framer-motion": "^12.42.2",
     "next": "16.2.10",
-    "next-sanity": "^13.1.1",
+    "next-sanity": "^13.3.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "sanity": "^6.4.0",
-    "styled-components": "^6.4.3"
+    "sanity": "^5.31.2",
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
