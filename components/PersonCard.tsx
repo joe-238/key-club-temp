@@ -55,7 +55,9 @@ export function PersonCard({
           {person.name}
         </h3>
         {person.bio && (
-          <p className="mt-2 text-sm leading-relaxed text-kc-muted">{person.bio}</p>
+          <p className="mt-2 text-sm leading-relaxed text-kc-muted">
+            {person.bio}
+          </p>
         )}
         {showContacts && (person.email || person.instagram) && (
           <div className="mt-auto flex flex-wrap gap-3 pt-4 text-sm font-medium">
@@ -64,7 +66,7 @@ export function PersonCard({
                 href={`mailto:${person.email}`}
                 className="text-kc-blue hover:text-kc-blue-deep"
               >
-                Email
+                Email: {person.email}
               </a>
             )}
             {person.instagram && (
