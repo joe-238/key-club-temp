@@ -11,19 +11,7 @@ function initials(name: string) {
     .toUpperCase();
 }
 
-function instagramHref(value: string) {
-  if (value.startsWith("http")) return value;
-  const handle = value.replace(/^@/, "");
-  return `https://instagram.com/${handle}`;
-}
-
-export function PersonCard({
-  person,
-  showContacts = false,
-}: {
-  person: Person;
-  showContacts?: boolean;
-}) {
+export function PersonCard({ person }: { person: Person }) {
   const photoUrl = person.photo
     ? urlFor(person.photo).width(400).height(400).fit("crop").url()
     : null;
@@ -47,39 +35,23 @@ export function PersonCard({
           </div>
         )}
       </div>
+
       <div className="flex flex-1 flex-col p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-kc-blue">
           {person.position}
         </p>
+
         <h3 className="mt-1 font-display text-xl font-semibold text-kc-ink">
           {person.name}
         </h3>
-        {person.bio && (
-          <p className="mt-2 text-sm leading-relaxed text-kc-muted">
-            {person.bio}
-          </p>
-        )}
-        {showContacts && (person.email || person.instagram) && (
-          <div className="mt-auto flex flex-wrap gap-3 pt-4 text-sm font-medium">
-            {person.email && (
-              <a
-                href={`mailto:${person.email}`}
-                className="text-kc-blue hover:text-kc-blue-deep"
-              >
-                Email: {person.email}
-              </a>
-            )}
-            {person.instagram && (
-              <a
-                href={instagramHref(person.instagram)}
-                target="_blank"
-                rel="noreferrer"
-                className="text-kc-blue hover:text-kc-blue-deep"
-              >
-                Instagram
-              </a>
-            )}
-          </div>
+
+        {person.email && (
+          <a
+            href={`mailto:${person.email}`}
+            className="mt-3 break-words text-sm text-kc-blue hover:text-kc-blue-deep"
+          >
+            {person.email}
+          </a>
         )}
       </div>
     </article>
