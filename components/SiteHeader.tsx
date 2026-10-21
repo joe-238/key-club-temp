@@ -36,7 +36,7 @@ export function SiteHeader({
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link href="/" className="group flex min-w-0 items-center gap-3">
             <img
-              src="/logo.png"
+              src="/icon.png"
               alt="School logo"
               className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12"
             />
